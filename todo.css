@@ -1,0 +1,187 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Poppins", sans-serif;
+}
+
+/* BACKGROUND */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(-45deg, #667eea, #764ba2, #ec4899, #3b82f6);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+/* ANIMATION */
+@keyframes gradientMove {
+  0% { background-position: 0% }
+  50% { background-position: 100% }
+  100% { background-position: 0% }
+}
+
+/* CONTAINER */
+.container {
+  width: 420px;
+  padding: 25px;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(15px);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* TITLE */
+h2 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  background: linear-gradient(90deg,#6366f1,#ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* DATE */
+#forDateAndTime {
+  text-align: center;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* SEARCH */
+#search {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* STATS */
+#stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #555;
+}
+
+/* INPUT SECTION */
+.input-section {
+  display: flex;
+  gap: 10px;
+}
+
+#input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* SELECT */
+#Priority {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* BUTTON */
+button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 13px;
+}
+
+/* ADD BUTTON */
+#createbtn {
+  background: linear-gradient(135deg,#6366f1,#8b5cf6);
+  color: white;
+}
+
+#createbtn:hover {
+  transform: scale(1.05);
+}
+
+/* FILTERS */
+.filters {
+  display: flex;
+  gap: 8px;
+}
+
+.filters button {
+  flex: 1;
+  background: #e5e7eb;
+}
+
+.filters button:hover {
+  background: #6366f1;
+  color: white;
+}
+
+/* TASK LIST */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* TASK ITEM */
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  padding: 10px;
+  border-radius: 10px;
+
+  background: white;
+  border: 1px solid #e5e7eb;
+
+  transition: 0.2s;
+}
+
+li:hover {
+  transform: translateX(5px);
+}
+
+/* TEXT */
+li span {
+  flex: 1;
+}
+
+/* BUTTON GROUP */
+li div {
+  display: flex;
+  gap: 6px;
+}
+
+/* EDIT */
+li button:nth-child(1) {
+  background: #3b82f6;
+  color: white;
+}
+
+/* DELETE */
+li button:nth-child(3) {
+  background: #ef4444;
+  color: white;
+}
+
+/* CLEAR BUTTON */
+#clrBtn {
+  background: linear-gradient(135deg,#ef4444,#dc2626);
+  color: white;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Task Manager</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Smart Task Manager</h2>
+
+    <div id="forDateAndTime"></div>
+
+    <input type="text" id="search" placeholder="Search tasks...">
+
+    <p id="stats">
+        <span id="totalcount"></span>
+        <span id="completedcount"></span>
+        <span id="pendingcount"></span>
+    </p>
+
+    <div class="input-section">
+        <input type="text" id="input" placeholder="Enter a task...">
+
+        <select id="Priority">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+
+        <button id="createbtn">Add</button>
+    </div>
+
+    <div class="filters">
+        <button id="all">All</button>
+        <button id="completed">Completed</button>
+        <button id="pending">Pending</button>
+    </div>
+
+    <ul id="list"></ul>
+
+    <button id="clrBtn">Clear All</button>
+
+</div>
+
+<script src="todo.js"></script>
+</body>
+</html>
