@@ -26,7 +26,8 @@ function saveTasks(){
 
 function renderTasks(){
    parent.innerHTML="";
- let filteredTasks=tasks;
+
+   let filteredTasks=tasks;
   
   if(currentFilter === "completed"){
       filteredTasks = tasks.filter(task  => task.isCompleted);
@@ -213,26 +214,44 @@ clrBtn.addEventListener("click",function(){
   renderTasks();
  })
 
-console.log(currentFilter);
+let toggleBtn =document.getElementById("themeToggle");
+
+let savedtheme = localStorage.getItem("theme");
+
+if(savedtheme ==="dark"){
+toggleBtn.textContent="☀";
+}
+
+toggleBtn.addEventListener("click",function(){
+
+  document.body.classList.toggle("dark");
+
+  if(document.body.classList.contains("dark")){
+    localStorage.setItem("theme","dark");
+    toggleBtn.textContent="☀";
+  }else{
+    localStorage.setItem("theme","light");
+    toggleBtn.textContent="🌙";
+  }
+
+});
 
 
 
-/* ================= THEME VARIABLES ================= */
-// :root {
-//   --primary: #6366f1;
-//   --secondary: #8b5cf6;
-//   --accent: #ec4899;
 
-//   --bg-card: rgba(255, 255, 255, 0.9);
 
-//   --text-main: #1f2937;
-//   --text-light: #6b7280;
 
-//   --border: #e5e7eb;
 
-//   --danger: #ef4444;
 
-//   --radius: 10px;
-//   --spacing: 10px;
-// }
+
+
+
+
+
+
+
+
+
+
+
 

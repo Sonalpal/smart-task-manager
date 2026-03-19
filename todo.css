@@ -1,3 +1,62 @@
+#themeToggle {
+  float: right;
+  border: none;
+  background: #e5e7eb;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* DARK MODE */
+.dark {
+  background: #0f172a;
+}
+
+.dark #firstdiv {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+.dark #search,
+.dark #input,
+.dark select {
+  background: #334155;
+  color: white;
+  border: 1px solid #475569;
+}
+
+.dark li {
+  background: #334155;
+}
+
+.dark li:hover {
+  background: #475569;
+}
+
+.dark #filters button {
+  background: #334155;
+  color: white;
+}
+
+.dark #filters button:hover {
+  background: #475569;
+}
+
+.dark .edit-btn {
+  background: #1d4ed8;
+  color: white;
+}
+
+.dark .delete-btn {
+  background: #dc2626;
+  color: white;
+}
+
+.dark #clrBtn {
+  background: #020617;
+}
+
+
 /* RESET */
 * {
   margin: 0;
@@ -184,4 +243,86 @@ li button:nth-child(3) {
 #clrBtn {
   background: linear-gradient(135deg,#ef4444,#dc2626);
   color: white;
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 480px) {
+
+  /* container */
+  #firstdiv {
+    width: 95%;
+    padding: 15px;
+  }
+
+  /* title */
+  h2 {
+    font-size: 18px;
+  }
+
+  /* input section → stack */
+  #secdiv {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #input {
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  #createbtn {
+    width: 100%;
+  }
+
+  /* filter buttons → stack or wrap */
+  #filters {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  #filters button {
+    flex: 1 1 30%;
+  }
+
+  /* task item */
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  li span {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* action buttons → row */
+  .actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* search */
+  #search {
+    font-size: 14px;
+  }
+
+  /* stats */
+  #stats {
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+  }
+
+  /* clear button */
+  #clrBtn {
+    width: 100%;
+  }
+}
+buttons{
+  min-height: 36px;
 }
