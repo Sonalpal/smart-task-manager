@@ -219,6 +219,7 @@ let toggleBtn =document.getElementById("themeToggle");
 let savedtheme = localStorage.getItem("theme");
 
 if(savedtheme ==="dark"){
+  document.body.classList.add("dark");
 toggleBtn.textContent="☀";
 }
 
